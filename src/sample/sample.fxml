@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="737.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane prefHeight="488.0" prefWidth="660.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="Tab1" text="Товары">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="TableViewProduct" layoutX="14.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="47.0">
+                          <columns>
+                            <TableColumn fx:id="TableColumn1" prefWidth="75.0" text="Наименование" />
+                            <TableColumn fx:id="TableColumn2" prefWidth="75.0" text="Категория" />
+                            <TableColumn fx:id="TableColumn3" prefWidth="75.0" text="Производитель" />
+                            <TableColumn fx:id="TableColumn4" prefWidth="75.0" text="Единица измерения" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Button fx:id="ButtonInsertProduct" layoutX="394.0" layoutY="14.0" mnemonicParsing="false" text="Добавить товар" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <Button fx:id="Button_Refresh1" layoutX="316.0" layoutY="14.0" mnemonicParsing="false" text="Обновить" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="14.0" />
+                        <Button fx:id="Button_Search1" layoutX="189.0" layoutY="14.0" mnemonicParsing="false" text="Поиск" AnchorPane.leftAnchor="189.0" AnchorPane.topAnchor="14.0" />
+                        <TextField fx:id="TextField_NameProduct1" layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                     </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="Tab2" text="Поставка товара">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                      <TableView fx:id="TableViewSupplier" layoutX="14.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="47.0">
+                          <columns>
+                              <TableColumn fx:id="TableColumn5" prefWidth="75.0" text="Товар" />
+                              <TableColumn fx:id="TableColumn6" prefWidth="75.0" text="Дата поступления" />
+                              <TableColumn fx:id="TableColumn7" prefWidth="75.0" text="Колличество" />
+                              <TableColumn fx:id="TableColumn8" prefWidth="75.0" text="Цена за ед" />
+                              <TableColumn fx:id="TableColumn9" prefWidth="75.0" text="Поставщик" />
+                          </columns>
+                          <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                          </columnResizePolicy>
+                      </TableView>
+                        <Button fx:id="ButtonInsertSupplier" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" text="Добавить запись" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <Button fx:id="Button_Refresh2" layoutX="534.0" layoutY="14.0" mnemonicParsing="false" text="Обновить" AnchorPane.rightAnchor="132.0" AnchorPane.topAnchor="14.0" />
+                        <TitledPane expanded="false" layoutX="15.0" layoutY="4.0" prefHeight="171.0" prefWidth="328.0" text="Параметры фильтра" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="14.0">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="С : " />
+                                          <DatePicker fx:id="DataPricker_Filter1" prefHeight="25.0" prefWidth="200.0" AnchorPane.rightAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <DatePicker fx:id="DataPricker_Filter2" prefHeight="25.0" prefWidth="200.0" AnchorPane.rightAnchor="0.0" />
+                                          <Label text="По : " />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="20.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ChoiceBox fx:id="ChoiceBox_CategoryProduct" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="0.0" />
+                                          <Label text="Категория товара :" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="20.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Поставщик :" />
+                                          <ChoiceBox fx:id="ChoiceBox_Supplier" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                     <AnchorPane layoutX="20.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0">
+                                         <children>
+                                             <Label text="Наименование товара :" />
+                                             <TextField fx:id="TextField_NameProduct2" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="0.0" />
+                                         </children>
+                                     </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="Button_Search2" layoutX="350.0" layoutY="14.0" mnemonicParsing="false" text="Поиск" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="14.0" />
+                  </children>
+              </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="Tab3" text="Открузка товара">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <TableView fx:id="TableViewShipment" layoutX="14.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="47.0">
+                                <columns>
+                                    <TableColumn fx:id="TableColumn10" prefWidth="75.0" text="Товар" />
+                                    <TableColumn fx:id="TableColumn11" prefWidth="75.0" text="Дата отгрузки" />
+                                    <TableColumn fx:id="TableColumn12" prefWidth="75.0" text="Колличество" />
+                                </columns>
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                </columnResizePolicy>
+                            </TableView>
+                            <Button fx:id="ButtonInsertShipment" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" text="Добавить запись" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                            <Button fx:id="Button_Refresh3" layoutX="315.0" layoutY="14.0" mnemonicParsing="false" text="Обновить" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="14.0" />
+                        <TextField fx:id="TextField_NameProduct3" layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <Button fx:id="Button_Search3" layoutX="180.0" layoutY="14.0" mnemonicParsing="false" text="Поиск" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="14.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="Tab4" text="Состояние склада">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <TableView fx:id="TableViewStock" layoutX="14.0" layoutY="47.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="47.0">
+                                <columns>
+                                    <TableColumn fx:id="TableColumn13" prefWidth="75.0" text="Товар" />
+                                    <TableColumn fx:id="TableColumn14" prefWidth="75.0" text="Колличество" />
+                                </columns>
+                                <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                </columnResizePolicy>
+                            </TableView>
+                            <Button fx:id="Button_Search4" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" text="Поиск" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <DatePicker fx:id="DatePickerDataSearch1" layoutX="259.0" layoutY="14.0" AnchorPane.rightAnchor="79.0" AnchorPane.topAnchor="14.0" />
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Insert_Shipment.Insert_Shipment_Controller">
+    <children>
+        <Label layoutX="26.0" layoutY="25.0" text="Наименование товара" />
+        <Label layoutX="195.0" layoutY="139.0" text="Дата отгрузки" />
+        <TextField fx:id="TextField_Count" layoutX="26.0" layoutY="156.0" />
+        <Label layoutX="26.0" layoutY="139.0" text="Количество единиц" />
+        <Button fx:id="Button_InsertShipment" layoutX="489.0" layoutY="333.0" mnemonicParsing="false" text="Добавить" />
+        <ChoiceBox fx:id="ChoiceBox_Product" layoutX="26.0" layoutY="48.0" prefHeight="25.0" prefWidth="348.0" />
+        <DatePicker fx:id="DataPicker_Data" layoutX="195.0" layoutY="156.0" />
+    </children>
+</AnchorPane>
